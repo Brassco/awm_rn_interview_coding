@@ -1,16 +1,18 @@
 import React from 'react';
 import {
   SafeAreaView,
-  StatusBar,
+  ScrollView,
   StyleSheet,
   Text,
+  View,
+  Image,
   useColorScheme,
 } from 'react-native';
 
-import {
-  Colors
-} from 'react-native/Libraries/NewAppScreen';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
+//Components
+import Profile from './src/screens/Profile/Profile'
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -21,16 +23,12 @@ function App(): React.JSX.Element {
 
   return (
     <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <Text>Good luck!</Text>
+      <Profile />
+      
     </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-});
+const styles = StyleSheet.create({});
 
 export default App;
